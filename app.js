@@ -1,3 +1,4 @@
+//Este programa sirve para aprender a multiplicar
 const { crearArchivo, listarTabla } = require('./multiplicar/multiplicacion'); //importando nuestro archivo multiplicacion
 const argumentos = require('yargs') //para importar un paquete de npm solo ponerle el nombre
     .command('listar', 'Imprime en consola la tabla de multiplicar', { //comando reconocible en la consola "listar"
@@ -10,7 +11,7 @@ const argumentos = require('yargs') //para importar un paquete de npm solo poner
             default: 10 // para que solo corra hasta el diez 
         }
     })
-    .command('crear', 'crea', {
+    .command('crear', 'crea el archivo en txt', {
         base: {
             demand: true, //para que si o si pase el parametro
             alias: 'b' //base de mi parametro es como un alias literal del parametro base
@@ -42,3 +43,6 @@ switch (comando) {
 // .then(respuesta => console.log(`archivo creado: ${respuesta}`))
 
 // .catch(error => console.error());
+
+//git init para crear el repositorio
+// git status nos muestra los que no estan respaldados
